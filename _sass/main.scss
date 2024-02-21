@@ -1,8 +1,15 @@
+// VARIABLES
+$text-color: #e2e2e2;
+$background-color-card: rgba(59, 59, 59, 0.7);
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  background-color: #BCC2B1;
-  color: #314546;
+  background-image: url("/assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #9DA492;
+  color: $text-color;
   font-size: 20px;
   text-align: center;
 }
@@ -11,12 +18,12 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   line-height: 40px;
-  color: #253839;
+  color: $text-color;
 }
 
 a {
   text-decoration: none;
-  color: #43595A;
+  color: $text-color;
   font-weight: bold;
   transition: 0.3s ease;
 }
@@ -27,7 +34,7 @@ a {
 }
 
 .card {
-  background-color: #D1D6C6;
+  background-color: $background-color-card;
   border: 1px solid #9DA492;
   border-radius: 15px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
@@ -65,13 +72,13 @@ a {
 .logo-linkedin {
   width: 100px;
   padding-left: 1px;
-  margin-bottom: -5px;
+  margin-bottom: 4px;
 }
 
-.rounded-squared-img {
+.avatar {
   object-fit: cover;
-  width: 200;
-  height: 200;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
