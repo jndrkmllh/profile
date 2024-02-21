@@ -1,0 +1,33 @@
+body { font-family: 'Poppins', sans-serif; font-weight: 200; background-image: url("/assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"); background-size: cover; background-position: center; background-color: #9DA492; color: #e2e2e2; font-size: 20px; text-align: center; }
+
+h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: bold; line-height: 40px; color: #e2e2e2; }
+
+a { text-decoration: none; color: #e2e2e2; font-weight: bold; transition: 0.3s ease; }
+
+.container { width: 850px; margin: 0 auto; }
+
+.card { background-color: rgba(59, 59, 59, 0.7); border: 1px solid #9DA492; border-radius: 15px; box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); padding: 40px; margin: 25px auto; }
+
+.list-inline > li { display: inline-block; padding: 0px 8px; font-size: 35px; }
+
+.list-inline { list-style: none; padding-left: 0px; }
+
+.opacity-increase { opacity: 0.6; }
+
+.opacity-increase:hover { opacity: 1; }
+
+.opacity-decrease { opacity: 1; }
+
+.opacity-decrease:hover { opacity: 0.6; }
+
+.logo-linkedin { width: 100px; padding-left: 1px; margin-bottom: 4px; }
+
+.avatar { object-fit: cover; width: 200px; height: 200px; border-radius: 50%; }
+
+/* responsive design */
+@media (max-width: 960px) { /* For a screen < 960px, this CSS will be read */
+  .container { width: 700px; } }
+@media (max-width: 720px) { /* For a screen < 720px, this CSS will be read */
+  .container { width: 500px; } }
+@media (max-width: 540px) { /* For a screen < 540px, this CSS will be read */
+  .container { width: 300px; } }
