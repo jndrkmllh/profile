@@ -1,5 +1,6 @@
-<html>
-  <header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <title>My Profile</title>
     <meta name="description" content="This page is a summary of my Profile">
     <meta charset="utf-8">
@@ -10,51 +11,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/profile/assets/css/style.css">
-  </header>
+  </head>
 
-  <body class="container">
-    <div class="card">
-      <h1>Hello, I'm Jendrik ✌️</h1>
-      <div class="text-center my-4">
-        <img src="/profile/assets/images/me.jpg" class="avatar">
+  <body>
+    <div class="container">
+
+      <!-- GREETING -->
+      <div class="card">
+        <h1>Hello, I'm Jendrik ✌️</h1>
+        <div class="text-center my-4">
+          <img src="/profile/assets/images/me.jpg" class="avatar" alt="avatar">
+        </div>
+        <p>
+          Hello and welcome! I'm all about making software that makes life easier, not harder. With a background in electrical and software engineering, I've spent some solid years diving into everything from cutting-edge vision applications at MABRI.VISION GmbH to payroll systems at PayFit in Berlin. Recently, I've been sharpening my skills in Fullstack Web Development at Le Wagon, where I've gotten my hands dirty building apps from the ground up with tools like Ruby on Rails, HTML, CSS, and JavaScript.
+          <br>
+          <br>
+          For me, it's all about creating straightforward, user-friendly tech. I'm here to solve real-world problems with code, and I love collaborating with others who share that vibe. If you're into making cool, practical software solutions then let's get in touch and make something awesome together. 🚀
+        </p>
+        <a class="opacity-decrease" href="https://www.linkedin.com/in/jendrik-mallah/" target=_blank aria-label="LinkedIn">Visit me on <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" class="logo-linkedin" alt="logo-linkedin"></a>
       </div>
-      <p>
-        Hello and welcome! I'm all about making software that makes life easier, not harder. With a background in electrical and software engineering, I've spent some solid years diving into everything from cutting-edge vision applications at MABRI.VISION GmbH to payroll systems at PayFit in Berlin. Recently, I've been sharpening my skills in Fullstack Web Development at Le Wagon, where I've gotten my hands dirty building apps from the ground up with tools like Ruby on Rails, HTML, CSS, and JavaScript.
-        <br>
-        <br>
-        For me, it's all about creating straightforward, user-friendly tech. I'm here to solve real-world problems with code, and I love collaborating with others who share that vibe. If you're into making cool, practical software solutions then let's get in touch and make something awesome together. 🚀
-      </p>
-      <a class="opacity-decrease" href="https://www.linkedin.com/in/jendrik-mallah/" target=_blank>Visit me on <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" class="logo-linkedin"></a>
-    </div>
-    <div class="card">
-      <h2>
-        Projects
-      </h2>
-      <p>
-        I am passionate about cars, especially <strong>old ones</strong> from the 80's to early 2000's.
-      </p>
-      <h2>
-        Computers
-      </h2>
-      <p>
-        I am passionate about everything related to computes. I like to play and to work with them.
-      </p>
-      <h2>
-        Photograhpy and Camping - perfect harmony ☯️
-      </h2>
-      <p>
-        These hobby's are matching perfectly together. While I'm on a trip with my motorhome I always got my camera with me.
-      </p>
-    </div>
-    <div class="card">
-      <h2>
-        Follow me
-      </h2>
-      <ul class="list-inline">
-        <li><a class="list-inline opacity-increase" href="https://soundcloud.com/kraaam" target="_blank"><i class="fa-brands fa-soundcloud"></i></a></li>
-        <li><a class="list-inline opacity-increase" href="https://www.instagram.com/jndrkm/" target=_blank><i class="fa-brands fa-instagram"></i></a></li>
-        <li><a class="list-inline opacity-increase" href="https://github.com/jndrkmllh" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-      </ul>
+
+      <!-- PROJECTS -->
+      <div class="card">
+        <h2>
+          Projects
+        </h2>
+        <div class="project-card">
+          <div class="d-flex align-items-center justify-content-between">
+            <h3 class="title">MovieMojo</h3>
+            <span class="online-checker">online</span>
+          </div>
+          <p>Description of the project</p>
+          <a href="https://www.moviemojo.online" target=_blank aria-label="moviemojo" class="project-link">
+            <img src="/profile/assets/images/moviemojo.png" alt="moviemojo">
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="d-flex align-items-center justify-content-between">
+            <h3 class="title">HelPet</h3>
+            <span class="online-checker">online</span>
+          </div>
+          <p>Description of the project</p>
+          <a href="https://helpet-best-team-feab3b515811.herokuapp.com/" target=_blank aria-label="helpet" class="project-link">
+            <img src="/profile/assets/images/helpet.png" alt="helpet">
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ABOUT ME -->
+      <div class="card">
+        <h2>
+          About me
+        </h2>
+        <div class="d-flex justify-content-center">
+          <div class="hobby-container">
+            <!-- <h2><i class="fa-solid fa-car-side"></i></h2> -->
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="lbl-toggle"><i class="fa-solid fa-car-side"></i></label>
+            <div class="collapsible-content">
+              <div class="content-inner">
+                <p>
+                  I'm really into old-school cars, the ones from the '80s and '90s are my favorites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hobby-container">
+            <!-- <h2><i class="fa-solid fa-camera"></i> + <i class="fa-solid fa-caravan"></i> = <i class="fa-solid fa-yin-yang"></i></h2> -->
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="lbl-toggle"><i class="fa-solid fa-camera"></i> + <i class="fa-solid fa-caravan"></i> = <i class="fa-solid fa-yin-yang"></i></label>
+            <div class="collapsible-content">
+              <div class="content-inner">
+                <p>
+                  When I'm not geeking out on tech, I love to hit the road in my motorhome, camera always at the ready.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hobby-container">
+            <!-- <h2><i class="fa-solid fa-computer"></i></h2> -->
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="lbl-toggle"><i class="fa-solid fa-computer"></i></label>
+            <div class="collapsible-content">
+              <div class="content-inner">
+                <p>
+                  I'm also a big fan of computers, whether it's gaming or just tinkering around with them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOLLOW ME -->
+      <div class="card">
+        <h2>
+          Follow me
+        </h2>
+        <ul class="list-inline">
+          <li><a class="list-inline social-link" href="https://www.linkedin.com/in/jendrik-mallah/" target="_blank" aria-label="Soundcloud"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a class="list-inline social-link" href="https://github.com/jndrkmllh" target="_blank" aria-label="Github"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+      </div>
+
     </div>
 
     <script type="module" src="/profile/lib/index.js"></script>

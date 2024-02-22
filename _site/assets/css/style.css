@@ -1,12 +1,14 @@
-body { font-family: 'Poppins', sans-serif; font-weight: 200; background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"); background-size: cover; background-position: center; background-color: #9DA492; color: #e2e2e2; font-size: 20px; text-align: center; }
+body { font-family: 'Poppins', sans-serif; font-weight: 200; background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"); background-size: cover; background-position: center; background-color: #9DA492; background-repeat: no-repeat; background-attachment: fixed; box-shadow: inset 5000px 0 0 0 rgba(0, 0, 0, 0.6); color: #c7cfb9; font-size: 20px; text-align: center; }
 
-h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: bold; line-height: 40px; color: #e2e2e2; }
+h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: bold; line-height: 40px; color: #c7cfb9; }
 
-a { text-decoration: none; color: #e2e2e2; font-weight: bold; transition: 0.3s ease; }
+dl, ol, ul { margin-top: 0; margin-bottom: 0; }
 
-.container { width: 850px; margin: 0 auto; }
+a { text-decoration: none; color: #c7cfb9; font-weight: bold; transition: 0.3s ease; }
 
-.card { background-color: rgba(59, 59, 59, 0.7); border: 1px solid #9DA492; border-radius: 15px; box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); padding: 40px; margin: 25px auto; }
+.container { width: 850px; padding: 24px; }
+
+.card { background-color: transparent; border: 1px solid #9DA492; border-radius: 15px; box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); padding: 40px; margin: 25px auto; }
 
 .list-inline > li { display: inline-block; padding: 0px 8px; font-size: 35px; }
 
@@ -14,15 +16,45 @@ a { text-decoration: none; color: #e2e2e2; font-weight: bold; transition: 0.3s e
 
 .opacity-increase { opacity: 0.6; }
 
-.opacity-increase:hover { opacity: 1; }
+.opacity-increase:hover { opacity: 1; color: #c7cfb9; }
 
 .opacity-decrease { opacity: 1; }
 
-.opacity-decrease:hover { opacity: 0.6; }
+.opacity-decrease:hover { opacity: 0.6; color: #c7cfb9; }
 
 .logo-linkedin { width: 100px; padding-left: 1px; margin-bottom: 4px; }
 
 .avatar { object-fit: cover; width: 200px; height: 200px; border-radius: 50%; }
+
+.hobby-container { width: 240px; }
+
+.social-link:hover { color: #2574b9; }
+
+.project-card { width: 100%; background-color: #35383a9a; border-radius: 15px; text-align: left; padding: 1rem; margin-top: 1rem; }
+.project-card .online-checker { margin-bottom: 0.5rem; margin-left: 1rem; color: white; padding: 0px 8px; border-radius: 16px; }
+.project-card .success { background-color: #198754; }
+.project-card .failed { background-color: #dc3545; }
+.project-card img { width: 100%; border-radius: 4px; }
+
+.wrap-collabsible { margin-bottom: 1.2rem 0; }
+
+input[type='checkbox'] { display: none; }
+
+.lbl-toggle { display: block; font-size: 1.8rem; text-transform: uppercase; text-align: center; padding: 1rem; cursor: pointer; transition: all 0.25s ease-out; }
+
+.lbl-toggle:hover { color: #2574b9; }
+
+.lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; }
+
+.toggle:checked + .lbl-toggle::before { transform: rotate(90deg) translateX(-3px); }
+
+.collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; }
+
+.toggle:checked + .lbl-toggle + .collapsible-content { max-height: 100vh; }
+
+.toggle:checked + .lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+
+.collapsible-content .content-inner { border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; }
 
 /* responsive design */
 @media (max-width: 960px) { /* For a screen < 960px, this CSS will be read */

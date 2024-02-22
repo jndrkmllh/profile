@@ -1,16 +1,21 @@
 // VARIABLES
-$text-color: #e2e2e2;
-$background-color-card: rgba(59, 59, 59, 0.7);
+$green: #c7cfb9;
+$blue: #2574b9;
+$background-color-card: transparent; // rgba(59, 59, 59, 0.7);
+$success: #198754;
+$fail: #dc3545;
 
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  // background-image: url("/assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
   background-image: url("../images/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-color: #9DA492;
-  color: $text-color;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 5000px 0 0 0 rgba(0, 0, 0, 0.6);
+  color: $green;
   font-size: 20px;
   text-align: center;
 }
@@ -19,19 +24,25 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   line-height: 40px;
-  color: $text-color;
+  color: $green;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
   text-decoration: none;
-  color: $text-color;
+  color: $green;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
 .container {
   width: 850px;
-  margin: 0 auto;
+  padding: 24px;
+  // margin: 0 auto;
 }
 
 .card {
@@ -60,6 +71,7 @@ a {
 
 .opacity-increase:hover {
   opacity: 1;
+  color: $green;
 }
 
 .opacity-decrease {
@@ -68,6 +80,7 @@ a {
 
 .opacity-decrease:hover {
   opacity: 0.6;
+  color: $green;
 }
 
 .logo-linkedin {
@@ -81,6 +94,126 @@ a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+.hobby-container {
+  width: 240px;
+}
+
+.social-link:hover {
+  color: $blue;
+}
+
+
+
+// PROJECT CARDS
+
+.project-card {
+  width: 100%;
+  background-color: #35383a9a;
+  border-radius: 15px;
+  text-align: left;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  .online-checker {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    color: white;
+    padding: 0px 8px;
+    border-radius: 16px;
+
+  }
+
+  .success {
+    background-color: $success;
+  }
+
+  .failed {
+    background-color: $fail;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+
+// COLLAPSIBLE
+
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  // font-weight: bold;
+  // font-family: monospace;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  // color: #A77B0E;
+  // background: #FAE042;
+
+  cursor: pointer;
+
+  // border-radius: 7px;
+
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: $blue;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  // background: rgba(250, 224, 66, .2);
+  // border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
 }
 
 /* responsive design */
