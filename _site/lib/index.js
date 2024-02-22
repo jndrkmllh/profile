@@ -16,18 +16,14 @@ Array.from(myLabels).forEach(label => {
 
 const projectLinks = document.querySelectorAll(".project-link");
 const titles = document.querySelectorAll(".title");
-const onlineChecker = document.querySelectorAll(".online-checker");
-let index = 0;
 
 // console.log(projectLinks)
-console.log(titles)
+// console.log(titles)
 
 Array.from(projectLinks).forEach(link => {
   console.dir(link);
 
-  // const url = `https://cors-anywhere.herokuapp.com/${link.href}`;
   const url = link.href;
-  // const request = new Request(url);
 
   fetch(url)
   .then(response => {
@@ -36,7 +32,6 @@ Array.from(projectLinks).forEach(link => {
           // Handle the app being online (e.g., update the UI accordingly)
           titles.forEach(title => {
             if (link.ariaLabel.toLowerCase() === title.innerText.toLowerCase()) {
-              // console.dir(title.nextElementSibling.classList.add("success"));
               title.nextElementSibling.classList.add("success");
               title.nextElementSibling.innerText = "online";
               title.nextElementSibling.classList.remove("failed");
@@ -47,7 +42,6 @@ Array.from(projectLinks).forEach(link => {
           // Handle the app being offline or returning an error
           titles.forEach(title => {
             if (link.ariaLabel.toLowerCase() === title.innerText.toLowerCase()) {
-              // console.dir(title.nextElementSibling.classList.add("success"));
               title.nextElementSibling.classList.remove("success");
               title.nextElementSibling.innerText = "offline";
               title.nextElementSibling.classList.add("failed");
@@ -55,13 +49,11 @@ Array.from(projectLinks).forEach(link => {
           });
       }
   })
-  .then(index++)
   .catch(error => {
       console.log("Failed to reach Heroku app. It might be offline.", error);
       // Handle the app being unreachable (e.g., update the UI to show the app is offline)
       titles.forEach(title => {
         if (link.ariaLabel.toLowerCase() === title.innerText.toLowerCase()) {
-          // console.dir(title.nextElementSibling.classList.add("success"));
           title.nextElementSibling.classList.remove("success");
           title.nextElementSibling.innerText = "offline";
           title.nextElementSibling.classList.add("failed");
