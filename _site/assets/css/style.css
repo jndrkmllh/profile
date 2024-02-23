@@ -30,6 +30,8 @@ a { text-decoration: none; color: #c7cfb9; font-weight: bold; transition: 0.3s e
 
 .social-link:hover { color: #2574b9; }
 
+.skills-logo { width: 48px; margin: 0px 8px; }
+
 .project-card { width: 100%; background-color: #35383a9a; border-radius: 15px; text-align: left; padding: 1rem; margin-top: 1rem; }
 .project-card .online-checker { margin-bottom: 0.5rem; margin-left: 1rem; color: white; padding: 0px 8px; border-radius: 16px; }
 .project-card .success { background-color: #198754; }
