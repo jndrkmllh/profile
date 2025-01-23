@@ -58,6 +58,8 @@ input[type='checkbox'] { display: none; }
 
 .collapsible-content .content-inner { border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .5rem 1rem; }
 
+.logo-background { background-color: white; border-radius: 8px; padding: 0px 0px; display: inline-block; }
+
 /* responsive design */
 @media (max-width: 960px) { /* For a screen < 960px, this CSS will be read */
   .container { width: 700px; } }

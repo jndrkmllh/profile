@@ -219,6 +219,13 @@ input[type='checkbox'] {
   padding: .5rem 1rem;
 }
 
+.logo-background {
+  background-color: white;
+  border-radius: 8px;  // Adjust this value for more or less rounded corners
+  padding: 0px 0px;
+  display: inline-block;
+}
+
 /* responsive design */
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
